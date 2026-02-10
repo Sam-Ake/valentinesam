@@ -14,6 +14,20 @@ import styles from "./Closing.module.css";
 const Closing = () => {
   return (
     <section className={styles["closing-section"]} id="closing">
+      {/* Twinkling stars */}
+      <div className={styles["stars-container"]}>
+        {Array.from({ length: 40 }).map((_, i) => (
+          <div key={i} className={styles.star} />
+        ))}
+      </div>
+
+      {/* Shooting stars */}
+      <div className={styles["stars-container"]}>
+        {Array.from({ length: 5 }).map((_, i) => (
+          <div key={i} className={styles["shooting-star"]} />
+        ))}
+      </div>
+
       <div className={styles["closing-content"]}>
         <span className={styles["closing-heart"]}>💖</span>
 

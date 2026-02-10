@@ -82,6 +82,21 @@ const MemoryTimeline = () => {
 
   return (
     <section className={styles["timeline-section"]} id="timeline">
+      {/* Animated background orbs */}
+      <div className={styles["bg-orbs"]}>
+        <div className={`${styles.orb} ${styles.orb1}`} />
+        <div className={`${styles.orb} ${styles.orb2}`} />
+        <div className={`${styles.orb} ${styles.orb3}`} />
+        <div className={`${styles.orb} ${styles.orb4}`} />
+      </div>
+
+      {/* Floating sparkles */}
+      <div className={styles.sparkles}>
+        {Array.from({ length: 10 }).map((_, i) => (
+          <div key={i} className={styles.sparkle} />
+        ))}
+      </div>
+
       <div className={styles["timeline-header"]}>
         <h2>Our Love Story</h2>
         <p>Every moment with you is a memory I treasure 💕</p>

@@ -40,6 +40,13 @@ const ReasonsILoveYou = () => {
 
   return (
     <section className={styles["reasons-section"]} id="reasons">
+      {/* Rising dots background */}
+      <div className={styles["dots-container"]}>
+        {Array.from({ length: 20 }).map((_, i) => (
+          <div key={i} className={styles.dot} />
+        ))}
+      </div>
+
       <div className={styles["reasons-header"]}>
         <h2>Reasons I Love You</h2>
         <p>Tap each heart to reveal a reason 💖</p>

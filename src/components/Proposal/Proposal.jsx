@@ -1,61 +1,52 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import styles from "./Proposal.module.css";
+import img1 from "../../images/1.jpeg";
+import img2 from "../../images/2.jpeg";
+import img3 from "../../images/3.jpeg";
+import img4 from "../../images/4.jpeg";
+import img5 from "../../images/5.jpeg";
+import img6 from "../../images/6.jpeg";
+import img7 from "../../images/7.jpeg";
 
 /**
  * PhotoGallery — Auto-sliding carousel of your photos together 📸
- *
- * HOW TO ADD YOUR PHOTOS:
- * 1. Put your photos in the /public/photos/ folder
- *    (e.g., public/photos/photo1.jpg, public/photos/photo2.jpg, etc.)
- * 2. Update the `photos` array below with filenames and captions
- * 3. Write a sweet caption and date for each photo!
- *
- * The slideshow auto-advances every 4 seconds,
- * and she can also swipe or click arrows to navigate.
  */
 
-// 💡 ADD YOUR PHOTOS HERE!
-// Place image files in /public/photos/ and update this list
 const photos = [
   {
-    src: "/photos/photo1.jpg",
+    src: img1,
     caption: "The day it all started 💕",
     date: "January 2024",
   },
   {
-    src: "/photos/photo2.jpg",
+    src: img2,
     caption: "Our first date — I was so nervous! ☕",
     date: "February 2024",
   },
   {
-    src: "/photos/photo3.jpg",
+    src: img3,
     caption: "That time we couldn't stop laughing 😂",
     date: "April 2024",
   },
   {
-    src: "/photos/photo4.jpg",
+    src: img4,
     caption: "You looked so beautiful that day 🌸",
     date: "June 2024",
   },
   {
-    src: "/photos/photo5.jpg",
+    src: img5,
     caption: "Adventures with my favorite person 🌍",
     date: "August 2024",
   },
   {
-    src: "/photos/photo6.jpg",
+    src: img6,
     caption: "My happy place is with you 🥰",
     date: "October 2024",
   },
   {
-    src: "/photos/photo7.jpg",
+    src: img7,
     caption: "Making memories that last forever ✨",
     date: "December 2024",
-  },
-  {
-    src: "/photos/photo8.jpg",
-    caption: "Every moment with you is a gift 💖",
-    date: "February 2026",
   },
 ];
 
@@ -102,6 +93,32 @@ const Proposal = () => {
 
   return (
     <section className={styles["gallery-section"]} id="proposal">
+      {/* Faded photo icons floating up */}
+      <div className={styles["icons-container"]}>
+        {[
+          "📷",
+          "🖼️",
+          "📸",
+          "🎞️",
+          "📷",
+          "🖼️",
+          "📸",
+          "🎞️",
+          "📷",
+          "🖼️",
+          "📸",
+          "🎞️",
+          "📷",
+          "🖼️",
+          "📸",
+          "🎞️",
+        ].map((icon, i) => (
+          <span key={i} className={styles["photo-icon"]}>
+            {icon}
+          </span>
+        ))}
+      </div>
+
       <div className={styles["gallery-header"]}>
         <h2>Our Memories Together 📸</h2>
         <p>Every picture tells a piece of our story 💕</p>
