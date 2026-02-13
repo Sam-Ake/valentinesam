@@ -46,7 +46,7 @@ const memories = [
     date: "December 2025/ January 2026",
     title: "Our First Holiday Season",
     description:
-      "We entered the New year together, can forget how cold i was but it was all worth it because i was with you. ",
+      "We entered the New year together, can't forget how cold i was but it was all worth it because i was with you. ",
   },
   {
     emoji: "❤️",
